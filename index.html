@@ -85,14 +85,14 @@
   <div style="height: 5em;"></div>
 
   <!-- Stealth counter at the bottom, centered, green on green -->
-<div id="simple-counter" style="color: #091302; background-color: #091302; font-size: 6px; text-align: center;" aria-hidden="true"></div>
+<div id="simple-counter" style="color: #091302; background-color: #091302; font-size: 8px; text-align: center;" aria-hidden="true"></div>
 
 <script>
   const counterDiv = document.getElementById('simple-counter');
   let visitCount = sessionStorage.getItem('visitCount') || 0;
   visitCount++;
   sessionStorage.setItem('visitCount', visitCount);
-  counterDiv.textContent = `Visits this session: ${visitCount}`;
+  counterDiv.textContent = `No.: ${visitCount}`;
 </script>
   
 </body>
