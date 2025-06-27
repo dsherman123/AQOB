@@ -109,15 +109,14 @@
 <script>
   const counterDiv = document.getElementById('simple-counter');
 
-  fetch("https://api.countapi.xyz/hit/aquestionofbalance.com/visits")
+  // Use a simple custom namespace/key that definitely works
+  fetch("https://api.countapi.xyz/hit/aqob_site/visits")
     .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+      if (!response.ok) throw new Error("Network response was not ok");
       return response.json();
     })
     .then(data => {
-      counterDiv.textContent = `# ${data.value}`;
+      counterDiv.textContent = `Visits: ${data.value}`;
     })
     .catch(error => {
       console.error("Fetch error:", error);
@@ -125,15 +124,45 @@
     });
 </script>
 
-<!--
-<script>
+  <script>
   const counterDiv = document.getElementById('simple-counter');
-  let visitCount = localStorage.getItem('visitCount') || 0;
-  visitCount++;
-  localStorage.setItem('visitCount', visitCount);
-  counterDiv.textContent = ` ${visitCount}`;
+
+  const VISIT_KEY = 'aqob_unique_visitor_v1';
+
+  if (!localStorage.getItem(VISIT_KEY)) {
+    // Mark as visited so we don’t increment again
+    localStorage.setItem(VISIT_KEY, 'true');
+
+    // Increment global counter
+    fetch("https://api.countapi.xyz/hit/aqob_site/unique_visitors")
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
+      .then(data => {
+        counterDiv.textContent = `Unique Visitors: ${data.value}`;
+      })
+      .catch(error => {
+        console.error("Fetch error:", error);
+        counterDiv.textContent = "Visitor count unavailable";
+      });
+  } else {
+    // Just get the value without incrementing
+    fetch("https://api.countapi.xyz/get/aqob_site/unique_visitors")
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
+      .then(data => {
+        counterDiv.textContent = `Unique Visitors: ${data.value}`;
+      })
+      .catch(error => {
+        console.error("Fetch error:", error);
+        counterDiv.textContent = "Visitor count unavailable";
+      });
+  }
 </script>
--->
-  
+<div id="unique-counter"></div>
+<div id="view-counter"></div>
 </body>
 </html>
