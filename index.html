@@ -108,11 +108,29 @@
 
 <script>
   const counterDiv = document.getElementById('simple-counter');
+  const namespace = "aqob_site";
+  const key = "visits";
+
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(response => response.json())
+    .then(data => {
+      counterDiv.textContent = `Visits: ${data.value}`;
+    })
+    .catch(err => {
+      console.error("Counter error:", err);
+      counterDiv.textContent = "Visit count unavailable";
+    });
+</script>
+
+<!--
+<script>
+  const counterDiv = document.getElementById('simple-counter');
   let visitCount = localStorage.getItem('visitCount') || 0;
   visitCount++;
   localStorage.setItem('visitCount', visitCount);
   counterDiv.textContent = ` ${visitCount}`;
 </script>
+-->
   
 </body>
 </html>
