@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,39 +41,19 @@
     </section>
 
     <section>
-  <p>Pre-publication.  Read the first four chapters...</p>
-  <!--   <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-    <a href="AQOBPreview.pdf" style="padding: 0.5rem 1rem; background-color: #2980b9; color: white; border-radius: 5px; text-decoration: none;">Preview</a>
-    <a href="AQOBPreview.epub" style="padding: 0.5rem 1rem; background-color: #2980b9; color: white; border-radius: 5px; text-decoration: none;">Preview as EPUB</a>
-  </div>
-<p style="font-size: 0.9em; color: #555; margin-top: 0.5rem;">
-  <i>
-<p><b>EPUB Instructions</b></p>
-    • On iPhone/iPad: Tap and choose “Open in Books” to read in your library.<br>
-    • On Android: Use an EPUB reader like Google Play Books or Lithium (free on the Play Store).<br>
-    • On Kindle: Convert with <a href="https://www.amazon.com/sendtokindle" target="_blank" style="color: #2980b9;">Send to Kindle</a> or use Calibre to transfer it.
-  </i>
-</p>
- </section>
- 
-   <section>
-  <p>Pre-publication.  Read the first four chapters...</p>
-    -->
+      <p>Pre-publication. Read the first four chapters...</p>
       <div style="display: flex; justify-content: space-between; align-items: center;">
-    <a href="AQOBPreview.pdf" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #2980b9; color: white; border-radius: 5px; text-decoration: none;">Preview</a>
-</section>
- 
-    
+        <a href="AQOBPreview.pdf" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #2980b9; color: white; border-radius: 5px; text-decoration: none;">Preview</a>
+      </div>
+    </section>
 
-    
     <section>
       <h2>Author</h2>
       <p>
         David S. Sherman, Ph.D., is a licensed psychotherapist, serial software entrepreneur, business startup strategist, and an explorer of the human psyche...
       </p>
     </section>
-<p></p>
-<p></p>
+
     <section id="contact">
       <h2>Contact</h2>
       <p>Use this form to send a message to David Sherman:</p>
@@ -92,112 +71,50 @@
     </section>
   </main>
 
-      
-<footer style="text-align: center; padding: 1rem; background-color: #091302; color: #f0b73d;">
-  <p>Copyright &copy; 2025 David Scott Sherman. All rights reserved.</p>
+  <footer style="text-align: center; padding: 1rem; background-color: #091302; color: #f0b73d;">
+    <p>Copyright &copy; 2025 David Scott Sherman. All rights reserved.</p>
+    <div style="margin-top: 2rem; font-size: 12px; color: #ccc;">
+      <div id="view-counter">Total Visits: loading...</div>
+      <div id="unique-counter">Unique Visitors: loading...</div>
+    </div>
+  </footer>
 
-  <!-- Counters -->
-  <div style="margin-top: 2rem; font-size: 12px; color: #ccc;">
-    <div id="view-counter">Total Visits: ...</div>
-    <div id="unique-counter">Unique Visitors: ...</div>
-  </div>
-</footer>
-
-<script>
-  // Total visits counter (counts every page load)
-  fetch("https://api.countapi.xyz/hit/aqob_site/total_views")
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('view-counter').textContent = `Total Visits: ${data.value}`;
-    })
-    .catch(() => {
-      document.getElementById('view-counter').textContent = "Total Visits: unavailable";
-    });
-
-  // Unique visitors counter (only counts once per browser)
-  const uniqueKey = "aqob_unique_visitor_v1";
-  const uniqueCounterEl = document.getElementById("unique-counter");
-
-  if (!localStorage.getItem(uniqueKey)) {
-    localStorage.setItem(uniqueKey, "true");
-    fetch("https://api.countapi.xyz/hit/aqob_site/unique_visitors")
-      .then(res => res.json())
-      .then(data => {
-        uniqueCounterEl.textContent = `Unique Visitors: ${data.value}`;
-      })
-      .catch(() => {
-        uniqueCounterEl.textContent = "Unique Visitors: unavailable";
-      });
-  } else {
-    fetch("https://api.countapi.xyz/get/aqob_site/unique_visitors")
-      .then(res => res.json())
-      .then(data => {
-        uniqueCounterEl.textContent = `Unique Visitors: ${data.value}`;
-      })
-      .catch(() => {
-        uniqueCounterEl.textContent = "Unique Visitors: unavailable";
-      });
-  }
-</script>
-
-
-<script>
-  const counterDiv = document.getElementById('simple-counter');
-
-  // Use a simple custom namespace/key that definitely works
-  fetch("https://api.countapi.xyz/hit/aqob_site/visits")
-    .then(response => {
-      if (!response.ok) throw new Error("Network response was not ok");
-      return response.json();
-    })
-    .then(data => {
-      counterDiv.textContent = `Visits: ${data.value}`;
-    })
-    .catch(error => {
-      console.error("Fetch error:", error);
-      counterDiv.textContent = "Visit count unavailable";
-    });
-</script>
-
+  <!-- These scripts will be activated once your custom endpoint is deployed -->
+  <!-- Replace URL below with your working endpoint like /api/counter or a real custom one -->
   <script>
-  const counterDiv = document.getElementById('simple-counter');
+    const totalViewEl = document.getElementById("view-counter");
+    const uniqueVisitorEl = document.getElementById("unique-counter");
+    const uniqueKey = "aqob_unique_visitor_v1";
 
-  const VISIT_KEY = 'aqob_unique_visitor_v1';
-
-  if (!localStorage.getItem(VISIT_KEY)) {
-    // Mark as visited so we don’t increment again
-    localStorage.setItem(VISIT_KEY, 'true');
-
-    // Increment global counter
-    fetch("https://api.countapi.xyz/hit/aqob_site/unique_visitors")
-      .then(response => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-      })
+    fetch("/api/counter/views")
+      .then(res => res.json())
       .then(data => {
-        counterDiv.textContent = `Unique Visitors: ${data.value}`;
+        totalViewEl.textContent = `Total Visits: ${data.count}`;
       })
-      .catch(error => {
-        console.error("Fetch error:", error);
-        counterDiv.textContent = "Visitor count unavailable";
+      .catch(() => {
+        totalViewEl.textContent = "Total Visits: unavailable";
       });
-  } else {
-    // Just get the value without incrementing
-    fetch("https://api.countapi.xyz/get/aqob_site/unique_visitors")
-      .then(response => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-      })
-      .then(data => {
-        counterDiv.textContent = `Unique Visitors: ${data.value}`;
-      })
-      .catch(error => {
-        console.error("Fetch error:", error);
-        counterDiv.textContent = "Visitor count unavailable";
-      });
-  }
-</script>
-<div id="unique-counter"></div>
-<div id="view-counter"></div>
+
+    if (!localStorage.getItem(uniqueKey)) {
+      localStorage.setItem(uniqueKey, "true");
+      fetch("/api/counter/unique")
+        .then(res => res.json())
+        .then(data => {
+          uniqueVisitorEl.textContent = `Unique Visitors: ${data.count}`;
+        })
+        .catch(() => {
+          uniqueVisitorEl.textContent = "Unique Visitors: unavailable";
+        });
+    } else {
+      fetch("/api/counter/unique?getOnly=true")
+        .then(res => res.json())
+        .then(data => {
+          uniqueVisitorEl.textContent = `Unique Visitors: ${data.count}`;
+        })
+        .catch(() => {
+          uniqueVisitorEl.textContent = "Unique Visitors: unavailable";
+        });
+    }
+  </script>
 </body>
 </html>
