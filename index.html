@@ -111,10 +111,15 @@
   const namespace = "aqob_site";
   const key = "visits";
 
-  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+  // Step 1: Create the key if it doesn't exist (safe to call multiple times)
+  fetch(`https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=0`)
+    .then(() => {
+      // Step 2: Increment the counter
+      return fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+    })
     .then(response => response.json())
     .then(data => {
-      counterDiv.textContent = `Visits: ${data.value}`;
+      counterDiv.textContent = `# ${data.value}`;
     })
     .catch(err => {
       console.error("Counter error:", err);
