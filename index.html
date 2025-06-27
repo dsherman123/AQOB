@@ -108,21 +108,19 @@
 
 <script>
   const counterDiv = document.getElementById('simple-counter');
-  const namespace = "aqob_site";
-  const key = "visits";
 
-  // Step 1: Create the key if it doesn't exist (safe to call multiple times)
-  fetch(`https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=0`)
-    .then(() => {
-      // Step 2: Increment the counter
-      return fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+  fetch("https://api.countapi.xyz/hit/aquestionofbalance.com/visits")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
     })
-    .then(response => response.json())
     .then(data => {
       counterDiv.textContent = `# ${data.value}`;
     })
-    .catch(err => {
-      console.error("Counter error:", err);
+    .catch(error => {
+      console.error("Fetch error:", error);
       counterDiv.textContent = "Visit count unavailable";
     });
 </script>
