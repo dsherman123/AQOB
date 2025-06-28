@@ -71,50 +71,79 @@
     </section>
   </main>
 
-  <footer style="text-align: center; padding: 1rem; background-color: #091302; color: #f0b73d;">
-    <p>Copyright &copy; 2025 David Scott Sherman. All rights reserved.</p>
-    <div style="margin-top: 2rem; font-size: 12px; color: #ccc;">
-      <div id="view-counter">Total Visits: loading...</div>
-      <div id="unique-counter">Unique Visitors: loading...</div>
-    </div>
-  </footer>
+ <footer style="text-align: center; padding: 1rem; background-color: #091302; color: #f0b73d;">
+  <p>Copyright &copy; 2025 David Scott Sherman. All rights reserved.</p>
+  <div style="margin-top: 2rem; font-size: 12px; color: #ccc;">
+    <div id="view-counter">Total Visits: loading...</div>
+    <div id="unique-counter">Unique Visitors: loading...</div>
+  </div>
+</footer>
+
+<script>
+  const repo = "dsherman123/AQOB"; // Your GitHub repo
+  const filePath = "counter.json";
+  const token = "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"; // 🔁 Replace this with your actual token (for testing only)
+  const uniqueKey = "aqob_unique_visitor";
+
+  const headers = {
+    "Authorization": `token ${token}`,
+    "Accept": "application/vnd.github.v3+json"
+  };
+
+  async function getFileShaAndContent() {
+    const res = await fetch(`https://api.github.com/repos/${repo}/contents/${filePath}`, {
+      headers
+    });
+    const data = await res.json();
+    return {
+      sha: data.sha,
+      content: JSON.parse(atob(data.content))
+    };
+  }
+
+  async function updateCounter(isUnique) {
+    const { sha, content } = await getFileShaAndContent();
+
+    content.views += 1;
+    if (isUnique) content.unique += 1;
+
+    const newContent = btoa(JSON.stringify(content, null, 2));
+
+    await fetch(`https://api.github.com/repos/${repo}/contents/${filePath}`, {
+      method: "PUT",
+      headers,
+      body: JSON.stringify({
+        message: "Update counter",
+        content: newContent,
+        sha
+      })
+    });
+
+    updateDisplay(content);
+  }
+
+  function updateDisplay(data) {
+    document.getElementById("view-counter").textContent = `Total Visits: ${data.views}`;
+    document.getElementById("unique-counter").textContent = `Unique Visitors: ${data.unique}`;
+  }
+
+  (async () => {
+    const isFirstVisit = !localStorage.getItem(uniqueKey);
+    if (isFirstVisit) localStorage.setItem(uniqueKey, "true");
+
+    try {
+      await updateCounter(isFirstVisit);
+    } catch (err) {
+      console.error("GitHub counter error:", err);
+      document.getElementById("view-counter").textContent = "Total Visits: unavailable";
+      document.getElementById("unique-counter").textContent = "Unique Visitors: unavailable";
+    }
+  })();
+</script>
+
 
   <!-- These scripts will be activated once your custom endpoint is deployed -->
   <!-- Replace URL below with your working endpoint like /api/counter or a real custom one -->
-  <script>
-    const totalViewEl = document.getElementById("view-counter");
-    const uniqueVisitorEl = document.getElementById("unique-counter");
-    const uniqueKey = "aqob_unique_visitor_v1";
-
-    fetch("/api/counter/views")
-      .then(res => res.json())
-      .then(data => {
-        totalViewEl.textContent = `Total Visits: ${data.count}`;
-      })
-      .catch(() => {
-        totalViewEl.textContent = "Total Visits: unavailable";
-      });
-
-    if (!localStorage.getItem(uniqueKey)) {
-      localStorage.setItem(uniqueKey, "true");
-      fetch("/api/counter/unique")
-        .then(res => res.json())
-        .then(data => {
-          uniqueVisitorEl.textContent = `Unique Visitors: ${data.count}`;
-        })
-        .catch(() => {
-          uniqueVisitorEl.textContent = "Unique Visitors: unavailable";
-        });
-    } else {
-      fetch("/api/counter/unique?getOnly=true")
-        .then(res => res.json())
-        .then(data => {
-          uniqueVisitorEl.textContent = `Unique Visitors: ${data.count}`;
-        })
-        .catch(() => {
-          uniqueVisitorEl.textContent = "Unique Visitors: unavailable";
-        });
-    }
-  </script>
+  
 </body>
 </html>
