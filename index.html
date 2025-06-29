@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Question of Balance | Novel by David S. Sherman</title>
+  <title>A Question of Balance | Psychological Literary Mystery Novel by David S. Sherman</title>
   <meta name="description" content="A Question of Balance is a philosophical psychological murder mystery novel by David S. Sherman exploring therapy, guilt, belief, and the limits of reason.">
+  <meta name="keywords" content="psychological thriller, literary fiction, therapy mystery, philosophical fiction, murder mystery, David S. Sherman, A Question of Balance, therapist, Satan, guilt, belief, theology, religion, existentialism">
+  <meta name="author" content="David S. Sherman">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="0e01831a53834e56">
 </head>
-<body style="background:#091302;color:#000;font-family:Georgia,serif;margin:0;padding:0">
-  <header style="background:#091302;color:#f0b73d;padding:2rem;text-align:center">
+<body style="background-color: #091302; color: #000; font-family: Georgia, serif; margin: 0; padding: 0;">
+  <header style="background-color: #091302; color: #f0b73d; padding: 2rem; text-align: center;">
     <h1><i>A Question of Balance</i></h1>
     A thought-provoking murder mystery probing the uneasy space where <br>psychology, philosophy, and religion collide.
     <p><small><i>A novel by David S. Sherman</i></small></p>
   </header>
 
-  <main style="padding:2rem;max-width:1200px;margin:auto;background:#fff;box-shadow:0 0 10px rgba(0,0,0,0.1)">
-    <section style="overflow:hidden">
-      <img src="AQOB Cover.png" alt="Book Cover" style="float:left;max-width:200px;margin:0 20px 20px 0">
+  <main style="padding: 2rem; max-width: 1200px; margin: auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <section style="overflow: hidden;">
+      <img src="AQOB Cover.png" alt="Book Cover" style="float: left; max-width: 200px; width: 100%; height: auto; margin: 0 20px 20px 0;">
       <p><i><b>For Dr. Steven Gold, a single patient may unearth the truth behind a murder—and himself.</b></i></p>
       <p><i><b>A Question of Balance</b> is a cerebral and emotionally charged mystery that examines the fragile terrain of guilt, belief, and the cost of self-knowledge.</i></p>
       <p><i><b>A Question of Balance</b></i> is a philosophical psychological murder mystery exploring the unraveling mind of therapist Steven Gold after an enigmatic new patient reveals unsettling truths.</p>
@@ -25,7 +29,9 @@
 
     <section>
       <p>Pre-publication. Read the first four chapters...</p>
-      <a href="AQOBPreview.pdf" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #2980b9; color: white; border-radius: 5px; text-decoration: none;">Preview</a>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="AQOBPreview.pdf" style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #2980b9; color: white; border-radius: 5px; text-decoration: none;">Preview</a>
+      </div>
     </section>
 
     <section>
@@ -40,50 +46,29 @@
       <p>Use this form to send a message to David Sherman:</p>
       <form action="https://formspree.io/f/xdkzdayz" method="POST">
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 8px 0;">
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;">
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="_replyto" required style="width: 100%; padding: 10px; margin: 8px 0;">
+        <input type="email" id="email" name="_replyto" required style="width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;">
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin: 8px 0;"></textarea>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;"></textarea>
         <input type="text" name="_gotcha" style="display:none">
         <input type="hidden" name="_redirect" value="thank-you.html">
-        <button type="submit" style="background-color: #2980b9; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Send Message</button>
+        <button type="submit" style="background-color: #2980b9; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Send Message</button>
       </form>
     </section>
   </main>
 
-  <footer style="text-align:center;padding:1rem;background:#091302;color:#f0b73d">
+  <footer style="text-align: center; padding: 1rem; background-color: #091302; color: #f0b73d;">
     <p>&copy; 2025 David Scott Sherman. All rights reserved.</p>
-    <div style="margin-top:1rem;font-size:12px;color:#ccc">
-      <div id="view-counter">Total Visits: loading...</div>
-      <div id="today-counter">Today's Visits: loading...</div>
+    <div style="margin-top: 2rem; font-size: 12px; color: #ccc;">
+      <!-- Simple counter embed -->
+      <script type="text/javascript" src="https://counter7.freecounterstat.com/public/counter.js?c=REPLACE_WITH_YOUR_COUNTER_ID"></script>
+      <noscript>
+        <a href="https://www.freecounterstat.com" title="web counter">
+          <img src="https://counter7.freecounterstat.com/public/REPLACE_WITH_YOUR_COUNTER_ID/0/0/" alt="web counter">
+        </a>
+      </noscript>
     </div>
   </footer>
-
-  <script>
-    const ns = "aqob";
-    const totalKey = "total";
-    const todayKey = "daily-" + new Date().toISOString().slice(0,10);
-
-    async function setupAndUpdate(key, elId, label) {
-      const createUrl = `https://api.countapi.xyz/create?namespace=${ns}&key=${key}&enable_reset=1`;
-      const hitUrl = `https://api.countapi.xyz/hit/${ns}/${key}`;
-
-      try {
-        await fetch(createUrl);
-      } catch (_) {}
-
-      try {
-        const res = await fetch(hitUrl);
-        const data = await res.json();
-        document.getElementById(elId).textContent = `${label}: ${data.value}`;
-      } catch (_) {
-        document.getElementById(elId).textContent = `${label}: unavailable`;
-      }
-    }
-
-    setupAndUpdate(totalKey, "view-counter", "Total Visits");
-    setupAndUpdate(todayKey, "today-counter", "Today's Visits");
-  </script>
 </body>
 </html>
