@@ -80,71 +80,22 @@
 </footer>
 
 <script>
-  const repo = "dsherman123/AQOB"; // ✅ Your GitHub repo
-  const filePath = "counter.json";
-  const token = "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"; // ✅ Your real token here (okay for testing)
-  const localStorageKey = "aqob_unique_visitor";
+  const namespace = "aqob";
+  const key = "total-visits";
 
-  const headers = {
-    "Authorization": `token ${token}`,
-    "Accept": "application/vnd.github.v3+json"
-  };
-
-  async function getFileShaAndContent() {
-    const response = await fetch(`https://api.github.com/repos/${repo}/contents/${filePath}`, {
-      headers
-    });
-
-    if (!response.ok) throw new Error("Failed to load counter.json");
-
-    const data = await response.json();
-    return {
-      sha: data.sha,
-      content: JSON.parse(atob(data.content))
-    };
-  }
-
-  async function updateCounter(isUnique) {
-    const { sha, content } = await getFileShaAndContent();
-
-    content.views += 1;
-    if (isUnique) content.unique += 1;
-
-    const updatedContent = btoa(JSON.stringify(content, null, 2));
-
-    const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${filePath}`, {
-      method: "PUT",
-      headers,
-      body: JSON.stringify({
-        message: "Update counter.json",
-        content: updatedContent,
-        sha
-      })
-    });
-
-    if (!updateRes.ok) throw new Error("Failed to update counter.json");
-
-    updateDisplay(content);
-  }
-
-  function updateDisplay(data) {
-    document.getElementById("view-counter").textContent = `Total Visits: ${data.views}`;
-    document.getElementById("unique-counter").textContent = `Unique Visitors: ${data.unique}`;
-  }
-
-  (async () => {
-    const isFirstVisit = !localStorage.getItem(localStorageKey);
-    if (isFirstVisit) localStorage.setItem(localStorageKey, "true");
-
-    try {
-      await updateCounter(isFirstVisit);
-    } catch (err) {
-      console.error("GitHub counter error:", err);
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("view-counter").textContent = `Total Visits: ${data.value}`;
+      document.getElementById("unique-counter").style.display = "none"; // Hide unused unique line
+    })
+    .catch(err => {
+      console.error("CountAPI error:", err);
       document.getElementById("view-counter").textContent = "Total Visits: unavailable";
-      document.getElementById("unique-counter").textContent = "Unique Visitors: unavailable";
-    }
-  })();
+      document.getElementById("unique-counter").style.display = "none";
+    });
 </script>
+
 
 
 
