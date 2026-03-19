@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David S. Sherman | Fiction</title>
+  <meta
+    name="description"
+    content="Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth."
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="David S. Sherman | Fiction" />
+  <meta
+    property="og:description"
+    content="Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth."
+  />
+  <meta
+    property="og:image"
+    content="https://www.aquestionofbalance.com/AQOB%20Cover.png"
+  />
+  <meta property="og:url" content="https://www.aquestionofbalance.com/" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="David S. Sherman | Fiction" />
+  <meta
+    name="twitter:description"
+    content="Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.aquestionofbalance.com/AQOB%20Cover.png"
+  />
+
+  <style>
+    :root {
+      --bg: #0a1206;
+      --panel: #10180c;
+      --gold: #e3b24a;
+      --gold-soft: #c89b3d;
+      --text: #202020;
+      --muted: #666;
+      --paper: #fbfaf7;
+      --rule: rgba(227, 178, 74, 0.45);
+      --link: #2e6fa4;
+      --max: 1100px;
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--paper);
+      color: var(--text);
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      background:
+        linear-gradient(rgba(10, 18, 6, 0.88), rgba(10, 18, 6, 0.92)),
+        radial-gradient(circle at top center, rgba(227, 178, 74, 0.12), transparent 45%);
+      color: var(--gold);
+      text-align: center;
+      padding: 4.5rem 1rem 3.5rem;
+      border-bottom: 1px solid rgba(227, 178, 74, 0.2);
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      font-weight: normal;
+      letter-spacing: 0.02em;
+    }
+
+    .site-header .subtitle {
+      width: min(760px, 100%);
+      margin: 1rem auto 0;
+      font-size: 1.08rem;
+      color: #f4e2b4;
+    }
+
+    .site-header .byline {
+      margin-top: 1.2rem;
+      color: #e9c978;
+      font-size: 0.98rem;
+    }
+
+    .intro-bar {
+      background: #f4efe3;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .intro-bar .container {
+      padding: 1rem 0;
+      text-align: center;
+      color: #51493c;
+      font-size: 0.98rem;
+    }
+
+    main {
+      padding: 3rem 0 4rem;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) 1fr;
+      gap: 2.25rem;
+      align-items: start;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      border-radius: 6px;
+      margin-bottom: 3rem;
+    }
+
+    .feature img {
+      width: 100%;
+      border-radius: 2px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature .eyebrow {
+      margin: 0 0 0.6rem 0;
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 0.8rem;
+    }
+
+    .feature h2 {
+      margin: 0 0 1rem 0;
+      font-weight: normal;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: #121212;
+    }
+
+    .feature .hook {
+      margin: 0 0 1.2rem 0;
+      font-size: 1.03rem;
+    }
+
+    .feature .description {
+      margin: 0 0 1.3rem 0;
+      color: #2b2b2b;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.72rem 1.15rem;
+      border-radius: 4px;
+      font-size: 0.98rem;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--link);
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: #245c8a;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: #333;
+      background: #fafafa;
+    }
+
+    .button.secondary:hover {
+      background: #f1f1f1;
+      text-decoration: none;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .book-card {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .book-card img {
+      width: 100%;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+      border-radius: 2px;
+    }
+
+    .book-card h3 {
+      margin: 0 0 0.45rem 0;
+      font-weight: normal;
+      font-size: 1.55rem;
+      color: #171717;
+    }
+
+    .book-card .meta {
+      margin: 0 0 1rem 0;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    .book-card p {
+      margin: 0 0 1rem 0;
+    }
+
+    .book-card .status {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3rem 0;
+    }
+
+    .author-block,
+    .contact-block {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .author-block h2,
+    .contact-block h2 {
+      margin-top: 0;
+      font-weight: normal;
+      font-size: 1.7rem;
+      color: #171717;
+    }
+
+    .author-block p,
+    .contact-block p {
+      max-width: 760px;
+    }
+
+    .contact-form {
+      max-width: 760px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.35rem;
+      font-weight: bold;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 0.9rem;
+      border: 1px solid #d1d1d1;
+      border-radius: 4px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .contact-form button {
+      margin-top: 1.2rem;
+      background: var(--link);
+      color: #fff;
+      padding: 0.72rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #245c8a;
+    }
+
+    footer {
+      background: var(--bg);
+      color: #e6c779;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid rgba(227, 178, 74, 0.2);
+    }
+
+    footer p {
+      margin: 0.35rem 0;
+    }
+
+    @media (max-width: 900px) {
+      .feature {
+        grid-template-columns: 1fr;
+      }
+
+      .books-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .book-card {
+        grid-template-columns: 1fr;
+      }
+
+      .book-card img {
+        width: min(220px, 100%);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        padding: 3.5rem 1rem 2.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><em>A Question of Balance</em></h1>
+      <div class="subtitle">
+        A thought-provoking murder mystery probing the uneasy space where
+        psychology, philosophy, and religion collide.
+      </div>
+      <p class="byline"><em>A novel by David S. Sherman</em></p>
+    </div>
+  </header>
+
+  <div class="intro-bar">
+    <div class="container">
+      Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth.
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <section class="feature">
+        <a href="aqob-cover.html" aria-label="View A Question of Balance cover">
+          <img
+            src="AQOB Cover.png"
+            alt="Cover of the novel A Question of Balance by David S. Sherman"
+          />
+        </a>
+
+        <div>
+          <p class="eyebrow">Featured Novel</p>
+          <h2><em>A Question of Balance</em></h2>
+
+          <p class="hook"><em><strong>For Dr. Steven Gold, a single patient may unearth the truth behind a murder—and himself.</strong></em></p>
+
+          <p class="description"><em><strong>A Question of Balance</strong> is a cerebral and emotionally charged mystery that explores the fragile terrain of guilt, belief, and the cost of self-knowledge.</em></p>
+
+          <p class="description"><em>As a psychologist’s search for truth deepens, questions of meaning and identity begin to blur the boundary between patient and self.</em></p>
+
+          <div class="button-row">
+            <a class="button primary" href="AQOBPreview.pdf">Read the Preview</a>
+            <a class="button secondary" href="aqob-cover.html">View Cover</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="books-grid">
+        <article class="book-card">
+          <a href="dia-cover.html" aria-label="View Dreams in Amber cover">
+            <img
+              src="DIA Cover.png"
+              alt="Cover of the novel Dreams in Amber by David S. Sherman"
+            />
+          </a>
+
+          <div>
+            <h3><em>Dreams in Amber</em></h3>
+            <p class="meta">A forthcoming prequel to <strong>A Question of Balance</strong>.</p>
+
+            <p>Before the questions of belief and identity that shape his later life, a young psychologist is drawn into a death that refuses to yield a clear explanation. As he searches for truth and understanding, he begins to confront a difficult reality: understanding is not the same as knowing, and some answers only deepen the mystery they were meant to resolve.</p>
+
+            <p class="status">Projected completion: December 2026.</p>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <a href="solip-cover.html" aria-label="View Solip cover">
+            <img
+              src="Solip Cover.png"
+              alt="Cover of the novel Solip by David S. Sherman"
+            />
+          </a>
+
+          <div>
+            <h3><em>Solip</em></h3>
+            <p class="meta">A new novel in progress.</p>
+
+            <p>A man begins to hear the thoughts of others—but cannot distinguish memory from fear, truth from imagination. As certainty dissolves, he is forced to confront a terrifying question: if nothing can be trusted, what remains?</p>
+
+            <p class="status">Projected completion: December 2026.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="author-block">
+        <h2>Author</h2>
+        <p>David S. Sherman, Ph.D., is a licensed psychotherapist and serial entrepreneur whose work explores identity, guilt, and belief.</p>
+        <p>His fiction explores the uneasy intersection of psychology, philosophy, and the limits of truth.</p>
+      </section>
+
+      <section id="contact" class="contact-block">
+        <h2>Contact</h2>
+        <p>Use this form to send a message to David Sherman.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/xdkzdayz" method="POST">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" required type="text" />
+
+          <label for="email">Your Email</label>
+          <input id="email" name="_replyto" required type="email" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required rows="5"></textarea>
+
+          <input style="display: none;" name="_gotcha" type="text" />
+          <input name="_redirect" type="hidden" value="thank-you.html" />
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p><em>Cover designs by David S. Sherman.</em></p>
+    <p>Copyright &copy; 2026 David Scott Sherman. All rights reserved.</p>
+  </footer>
+</body>
+</html>
