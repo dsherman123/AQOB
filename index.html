@@ -273,6 +273,41 @@
       margin: 0.35rem 0;
     }
 
+        .spotify-section {
+      max-width: 820px;
+    }
+
+    .spotify-section p {
+      margin: 0 0 1rem 0;
+    }
+
+    .spotify-rule {
+      text-align: center;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .spotify-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      width: 100%;
+    }
+
+    .spotify-container iframe {
+      display: block;
+      width: 100%;
+      height: 352px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    @media (min-width: 900px) {
+      .spotify-container {
+        max-width: 820px;
+      }
+    }
+    
     @media (max-width: 760px) {
       .featured-book,
       .book-entry {
@@ -396,11 +431,31 @@
         <p>David S. Sherman, Ph.D., is a licensed psychotherapist and serial entrepreneur.</p>
         <p>His work explores identity, guilt, and belief.</p>
         <p>His fiction explores the uneasy intersection of psychology, philosophy, and the limits of truth.</p>
-
-
-        
+    
       </section>
+      <hr class="section-rule" />
 
+      <section class="spotify-section">
+        <p class="spotify-rule">-----</p>
+        <p>Here are two Spotify playlists I use while writing and editing.</p>
+
+        <div class="spotify-container">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/0sIlfvh45wA2AqCXImD9ZS?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist for writing and editing 1">
+          </iframe>
+
+          <iframe
+            src="https://open.spotify.com/embed/playlist/7Kpwl7skJHxt4jwySh1QHL?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify playlist for writing and editing 2">
+          </iframe>
+        </div>
+      </section>
+      
       <hr class="section-rule" />
 
       <section id="contact" class="contact-section">
