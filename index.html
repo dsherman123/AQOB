@@ -4,35 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>David S. Sherman | Fiction</title>
-  <meta
-    name="description"
-    content="Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth."
-  />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="David S. Sherman" />
-  <meta
-    property="og:description"
-    content="Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth."
-  />
-  <meta
-    property="og:image"
-    content="https://www.aquestionofbalance.com/AQOB%20Cover.png"
-  />
-  <meta property="og:url" content="https://www.aquestionofbalance.com/" />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="David S. Sherman" />
-  <meta
-    name="twitter:description"
-    content="Fiction by David S. Sherman exploring psychology, philosophy, mystery, and the limits of truth."
-  />
-  <meta
-    name="twitter:image"
-    content="https://www.aquestionofbalance.com/AQOB%20Cover.png"
-  />
 
   <style>
     :root {
@@ -45,33 +16,12 @@
       --max: 920px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, serif;
       line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--link);
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
     }
 
     .container {
@@ -85,485 +35,176 @@
     }
 
     .site-title {
+      font-size: 3rem;
       margin: 0;
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: normal;
-      letter-spacing: 0.01em;
     }
 
     .site-subtitle {
-      margin: 1rem auto 0;
-      max-width: 700px;
       color: var(--muted);
-      font-size: 1.02rem;
     }
 
     .site-rule {
       width: 72px;
       height: 1px;
       background: var(--rule);
-      margin: 2.25rem auto 0;
-    }
-
-    main {
-      padding-bottom: 4rem;
-    }
-
-    .featured-book {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 2.5rem;
-      align-items: start;
-      margin-bottom: 4rem;
-    }
-
-    .featured-book img {
-      width: 100%;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-    }
-
-    .featured-label {
-      margin: 0 0 0.6rem 0;
-      color: var(--accent);
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .featured-book h2 {
-      margin: 0 0 0.9rem 0;
-      font-size: clamp(1.9rem, 3vw, 2.5rem);
-      font-weight: normal;
-      line-height: 1.15;
-      letter-spacing: 0.01em;
-    }
-
-    .featured-book .hook {
-      margin: 0 0 1rem 0;
-      font-size: 1.04rem;
-      line-height: 1.6;
-    }
-
-    .featured-book p {
-      margin: 0 0 1rem 0;
-    }
-
-    .actions {
-      margin-top: 1.6rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem 1.25rem;
-    }
-
-    .text-link {
-      color: var(--link);
-      border-bottom: 1px solid rgba(47, 95, 140, 0.35);
-      padding-bottom: 1px;
+      margin: 2rem auto;
     }
 
     .section-rule {
-      border: none;
       border-top: 1px solid var(--rule);
       margin: 3.5rem 0;
     }
 
-    .books-list {
-      display: grid;
-      gap: 3rem;
-    }
-
-    .book-entry {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 1.75rem;
-      align-items: start;
-    }
-
-    .book-entry img {
-      width: 100%;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-entry h3 {
-      margin: 0 0 0.35rem 0;
-      font-size: 1.55rem;
-      font-weight: normal;
-    }
-
-    .book-entry .meta {
-      margin: 0 0 1rem 0;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .book-entry p {
-      margin: 0 0 0.9rem 0;
-    }
-
-    .book-entry .status {
-      color: var(--muted);
-      font-style: italic;
-    }
-
     .author-section,
+    .author-note-section,
+    .spotify-section,
     .contact-section {
       max-width: 720px;
-    }
-
-    .author-note-section,
-    .spotify-section {
-      max-width: 720px;
-    }
-
-    .author-section h2,
-    .author-note-section h2,
-    .spotify-section h2,
-    .contact-section h2 {
-      margin: 0 0 1rem 0;
-      font-size: 1.6rem;
-      font-weight: normal;
-      letter-spacing: 0.01em;
-    }
-
-    .author-section p,
-    .author-note-section p,
-    .contact-section p,
-    .spotify-section p {
-      margin: 0 0 1rem 0;
     }
 
     .author-note-section p {
       max-width: 620px;
     }
 
+    .spotify-section p {
+      margin-bottom: 1.4rem;
+    }
+
     .playlist-block {
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
 
     .playlist-title {
-      margin: 0 0 0.35rem 0;
-      font-size: 1.15rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.4rem;
+      font-size: 1.35rem;
       font-weight: normal;
-      font-style: italic;
-      letter-spacing: 0.01em;
     }
 
     .playlist-rule {
       width: 36px;
       height: 1px;
       background: var(--rule);
-      margin: 0.5rem 0 1rem 0;
-    }
-
-    .spotify-container {
-      width: 100%;
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
+      margin: 0.6rem 0 1.2rem 0;
     }
 
     .spotify-container iframe {
-      display: block;
       width: 100%;
       height: 352px;
-      border: none;
       border-radius: 12px;
-    }
-
-    .contact-form {
-      margin-top: 1rem;
-    }
-
-    .contact-form label {
-      display: block;
-      margin-top: 1rem;
-      margin-bottom: 0.35rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="email"],
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem 0;
       border: none;
-      border-bottom: 1px solid #cfcfcf;
-      background: transparent;
-      font: inherit;
-      color: var(--text);
-      border-radius: 0;
-      outline: none;
-    }
-
-    .contact-form input[type="text"]:focus,
-    .contact-form input[type="email"]:focus,
-    .contact-form textarea:focus {
-      border-bottom-color: var(--accent);
-    }
-
-    .contact-form button {
-      margin-top: 1.4rem;
-      padding: 0;
-      background: none;
-      border: none;
-      color: var(--link);
-      font: inherit;
-      cursor: pointer;
-      border-bottom: 1px solid rgba(47, 95, 140, 0.35);
     }
 
     footer {
-      padding: 2rem 0 3rem;
       text-align: center;
+      padding: 2rem;
       color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    footer p {
-      margin: 0.35rem 0;
-    }
-
-    @media (max-width: 760px) {
-      .featured-book,
-      .book-entry {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-book img,
-      .book-entry img {
-        width: min(240px, 100%);
-        margin: 0 auto;
-      }
-
-      .site-header {
-        padding: 4rem 0 2.5rem;
-      }
-
-      .spotify-container iframe {
-        height: 352px;
-      }
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">David S. Sherman</h1>
-      <p class="site-subtitle">
-        Fiction exploring psychology, philosophy, mystery, and the limits of truth.
-      </p>
 
-      <div style="margin-top: 1.75rem;">
-        <div style="
-          width: 40px;
-          height: 1px;
-          background-color: rgba(139,106,32,0.35);
-          margin: 0 auto 10px auto;
-        "></div>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">David S. Sherman</h1>
+    <p class="site-subtitle">
+      Fiction exploring psychology, philosophy, mystery, and the limits of truth.
+    </p>
 
-        <p style="
-          font-style: italic;
-          font-size: 1.05rem;
-          color: var(--accent);
-          margin: 0;
-          letter-spacing: 0.02em;
-        ">
-          Understanding is not the same as knowing.
-        </p>
-      </div>
+    <p style="margin-top:1.5rem; font-style:italic; color:var(--accent);">
+      Understanding is not the same as knowing.
+    </p>
 
-      <div class="site-rule"></div>
+    <div class="site-rule"></div>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+<section class="author-section">
+  <h2>Author</h2>
+  <p>David S. Sherman, Ph.D., is a licensed psychotherapist and serial entrepreneur.</p>
+</section>
+
+<hr class="section-rule" />
+
+<section class="author-note-section">
+  <h2>Author’s Note</h2>
+
+  <p>We often mistake interpretation for truth and understanding for knowledge.</p>
+
+  <p>In my writing, I try to explore what happens when that distinction begins to erode—when certainty forms not from evidence, but from the need for coherence.</p>
+
+  <p>My books are not arguments, but examinations of how belief takes shape, and how difficult it is to unsettle once formed.</p>
+</section>
+
+<hr class="section-rule" />
+
+<section class="spotify-section">
+  <h2>Music</h2>
+
+  <p>
+    I listen to a wide variety of music while writing, reading, and revising. These are a few of the playlists I return to most often—different kinds of accompaniment for different kinds of thought.
+  </p>
+
+  <p>
+    Much of my work begins as fragments—notes jotted down throughout the day and night, often without clear connection. Music helps me return to them, to sit with them long enough for patterns to emerge and for something more coherent to take shape—though not always to resolve.
+  </p>
+
+  <p>
+    It also helps quiet the background noise of life when I’m trying to concentrate. I don’t use it as background so much as a way of sustaining attention—holding a space in which ideas can be revisited, tested, and, at times, transformed.
+  </p>
+
+  <div class="playlist-block">
+    <h3 class="playlist-title">The Sound of Thought</h3>
+    <div class="playlist-rule"></div>
+
+    <p>Piano trios and modern jazz shaped by tension rather than resolution.</p>
+
+    <div class="spotify-container">
+      <iframe src="https://open.spotify.com/embed/playlist/7Kpwl7skJHxt4jwySh1QHL"></iframe>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <div class="container">
-      <section class="featured-book">
-        <a href="aqob-cover.html" aria-label="View A Question of Balance cover">
-          <img
-            src="AQOB Cover.png"
-            alt="Cover of the novel A Question of Balance by David S. Sherman"
-          />
-        </a>
+  <div class="playlist-block">
+    <h3 class="playlist-title">Gold's Romantic Literature Playlist</h3>
+    <div class="playlist-rule"></div>
 
-        <div>
-          <p class="featured-label">Featured Novel</p>
-          <h2><em>A Question of Balance</em></h2>
+    <p>Quiet enough to reveal what’s there, structured enough to keep the mind from drifting.</p>
 
-          <p class="hook"><em><strong>For Dr. Steven Gold, a single patient may unearth the truth behind a murder—and himself.</strong></em></p>
-
-          <p><em><strong>A Question of Balance</strong> is a cerebral and emotionally charged mystery that explores the fragile terrain of guilt, belief, and the cost of self-knowledge.</em></p>
-
-          <p><em>As a psychologist’s search for truth deepens, questions of meaning and identity begin to blur the boundary between patient and self. Interpretation hardens into certainty, therapy becomes entanglement, and belief—disavowed in name—returns in other forms. What emerges is not a clear answer, but a confrontation with the limits of understanding itself.</em></p>
-
-          <div class="actions">
-            <a class="text-link" href="AQOBPreview.pdf">Read the first nine chapters</a>
-            <a class="text-link" href="aqob-cover.html">View cover</a>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section class="books-list">
-        <article class="book-entry">
-          <a href="dia-cover.html" aria-label="View Dreams in Amber cover">
-            <img
-              src="DIA Cover.png"
-              alt="Cover of the novel Dreams in Amber by David S. Sherman"
-            />
-          </a>
-
-          <div>
-            <h3><em>Dreams in Amber</em></h3>
-            <p class="meta">A forthcoming prequel to <strong>A Question of Balance</strong>.</p>
-
-            <p>Before the questions of belief and identity that shape his later life, a young psychologist is drawn into a series of murders that may—or may not—be connected. As he searches for truth and understanding, he begins to confront a difficult reality: understanding is not the same as knowing, and some answers only deepen the mystery they were meant to resolve.</p>
-
-            <p class="status">Projected completion: December 2026.</p>
-          </div>
-        </article>
-
-        <article class="book-entry">
-          <a href="solip-cover.html" aria-label="View Solip cover">
-            <img
-              src="Solip Cover.png"
-              alt="Cover of the novel Solip by David S. Sherman"
-            />
-          </a>
-
-          <div>
-            <h3><em>Solip</em></h3>
-            <p class="meta">A new novel in progress.</p>
-
-            <p>A man begins to hear the thoughts of others—but cannot distinguish memory from fear, truth from imagination. As certainty dissolves, he is forced to confront a terrifying question: if nothing can be trusted, what remains?</p>
-
-            <p class="status">Projected completion: December 2026.</p>
-          </div>
-        </article>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section class="author-section">
-        <h2>Author</h2>
-        <p>David S. Sherman, Ph.D., is a licensed psychotherapist and serial entrepreneur.</p>
-        <p>His work explores identity, guilt, and belief.</p>
-        <p>His fiction explores the uneasy intersection of psychology, philosophy, and the limits of truth.</p>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section class="author-note-section">
-        <h2>Author’s Note</h2>
-
-        <p>We often mistake interpretation for truth and understanding for knowledge.</p>
-        <p>In my writing, I try to explore what happens when that distinction begins to erode—when certainty forms not from evidence, but from the need for coherence.</p>
-        <p>My books are not arguments, but examinations of how belief takes shape, and how difficult it is to unsettle once formed.</p>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section class="spotify-section">
-        <h2>Music</h2>
-
-        <p>
-          I listen to a wide variety of music while reading, writing, and revising. These are a few of the playlists I return to most often—different kinds of accompaniment for different kinds of thought.
-        </p>
-
-        <p>
-          Much of my work begins as fragments—notes jotted down throughout the day and night, often without clear connection. Music helps me return to them, to sit with them long enough for patterns to emerge and for something more coherent to take shape—though not always to resolve.
-        </p>
-
-        <p>
-          It also helps quiet the background noise of life when I’m trying to concentrate. I don’t use it as background so much as a way of sustaining attention—holding a space in which ideas can be revisited, tested, and, at times, transformed.
-          
-        </p>
-        <p>  </p>
-
-        <div class="playlist-block">
-          <h3 class="playlist-title">The Sound of Thought</h3>
-          <div class="playlist-rule"></div>
-
-          <p>
-            Piano trios and modern jazz shaped by tension rather than resolution—music that moves without settling, allowing thought to deepen without distraction. For moments when attention narrows and ideas are followed closely, even when they resist conclusion.
-          </p>
-
-          <div class="spotify-container">
-            <iframe
-              title="The Sound of Thought Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/7Kpwl7skJHxt4jwySh1QHL?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="playlist-block">
-          <h3 class="playlist-title">Gold's Romantic Literature Playlist</h3>
-          <div class="playlist-rule"></div>
-
-          <p>
-            A quieter, more restrained field of sound—music that remains just beneath language, revealing what is already there without imposing itself. For reading and revision, where clarity matters, and subtle inconsistencies begin to emerge.
-          </p>
-
-          <div class="spotify-container">
-            <iframe
-              title="Gold's Romantic Literature Playlist Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/0sIlfvh45wA2AqCXImD9ZS?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="playlist-block">
-          <h3 class="playlist-title">Changing Light</h3>
-          <div class="playlist-rule"></div>
-
-          <p>
-            A broader, more fluid field of sound—music that shifts in tone, tempo, and texture without settling into a single mood. Less narrowly shaped than the others, it allows for variation and drift, where attention moves more freely and thought follows without being directed.
-          </p>
-
-          <div class="spotify-container">
-            <iframe
-              title="Changing Light Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/14s6LO8S2kdoIHRf5ohfhT?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>Use this form to send a message to David Sherman.</p>
-
-        <form class="contact-form" action="https://formspree.io/f/xdkzdayz" method="POST">
-          <label for="name">Your Name</label>
-          <input id="name" name="name" required type="text" />
-
-          <label for="email">Your Email</label>
-          <input id="email" name="_replyto" required type="email" />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required rows="5"></textarea>
-
-          <input style="display: none;" name="_gotcha" type="text" />
-          <input name="_redirect" type="hidden" value="thank-you.html" />
-
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+    <div class="spotify-container">
+      <iframe src="https://open.spotify.com/embed/playlist/0sIlfvh45wA2AqCXImD9ZS"></iframe>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    <p><em>Web page and cover designs by David S. Sherman.</em></p>
-    <p>Copyright &copy; 2026 David Scott Sherman. All rights reserved.</p>
-  </footer>
+  <div class="playlist-block">
+    <h3 class="playlist-title">Wider Weather</h3>
+    <div class="playlist-rule"></div>
+
+    <p>A broader field of sound—suited to long stretches of concentration and shifting states of thought.</p>
+
+    <div class="spotify-container">
+      <iframe src="https://open.spotify.com/embed/playlist/14s6LO8S2kdoIHRf5ohfhT"></iframe>
+    </div>
+  </div>
+
+</section>
+
+<hr class="section-rule" />
+
+<section class="contact-section">
+  <h2>Contact</h2>
+  <p>Use this form to send a message.</p>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <p>© 2026 David S. Sherman</p>
+</footer>
+
 </body>
 </html>
