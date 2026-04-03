@@ -458,6 +458,29 @@
 
       <hr class="section-rule" />
 
+      <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Use this form to send a message to David Sherman.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/xdkzdayz" method="POST">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" required type="text" />
+
+          <label for="email">Your Email</label>
+          <input id="email" name="_replyto" required type="email" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required rows="5"></textarea>
+
+          <input style="display: none;" name="_gotcha" type="text" />
+          <input name="_redirect" type="hidden" value="thank-you.html" />
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <hr class="section-rule" />
+
       <section class="spotify-section">
         <h2>Music</h2>
 
@@ -526,29 +549,6 @@
             </iframe>
           </div>
         </div>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>Use this form to send a message to David Sherman.</p>
-
-        <form class="contact-form" action="https://formspree.io/f/xdkzdayz" method="POST">
-          <label for="name">Your Name</label>
-          <input id="name" name="name" required type="text" />
-
-          <label for="email">Your Email</label>
-          <input id="email" name="_replyto" required type="email" />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required rows="5"></textarea>
-
-          <input style="display: none;" name="_gotcha" type="text" />
-          <input name="_redirect" type="hidden" value="thank-you.html" />
-
-          <button type="submit">Send Message</button>
-        </form>
       </section>
     </div>
   </main>
