@@ -156,6 +156,12 @@
       color: var(--link);
       border-bottom: 1px solid rgba(47, 95, 140, 0.35);
       padding-bottom: 1px;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .text-link:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     .section-rule {
@@ -304,6 +310,12 @@
       font: inherit;
       cursor: pointer;
       border-bottom: 1px solid rgba(47, 95, 140, 0.35);
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact-form button:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     footer {
@@ -347,12 +359,12 @@
         Fiction exploring psychology, philosophy, mystery, and the limits of truth.
       </p>
 
-      <div style="margin-top: 1.75rem;">
+      <div style="margin-top: 1.9rem;">
         <div style="
           width: 40px;
           height: 1px;
           background-color: rgba(139,106,32,0.35);
-          margin: 0 auto 10px auto;
+          margin: 0 auto 12px auto;
         "></div>
 
         <p style="
@@ -361,8 +373,19 @@
           color: var(--accent);
           margin: 0;
           letter-spacing: 0.02em;
+          line-height: 1.5;
         ">
           Understanding is not the same as knowing.
+        </p>
+
+        <p style="
+          margin: 0.75rem 0 0;
+          font-size: 0.94rem;
+          color: var(--muted);
+          letter-spacing: 0.01em;
+          line-height: 1.5;
+        ">
+          <a href="https://aquestionofbalance.substack.com" class="text-link">Read essays →</a>
         </p>
       </div>
 
