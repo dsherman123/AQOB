@@ -112,8 +112,8 @@
 
     .featured-book {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 2.5rem;
+      grid-template-columns: 320px 1fr;
+      gap: 2.75rem;
       align-items: start;
       margin-bottom: 4rem;
     }
@@ -141,33 +141,37 @@
       margin: 0 0 1rem 0;
     }
 
-    .cover-stack {
-      display: grid;
-      gap: 1.15rem;
+    .aqob-tagline {
+      margin: 0 0 1rem 0;
+      color: var(--muted);
+      font-style: italic;
     }
 
-    .cover-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      align-items: start;
+    .cover-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
     }
 
     .cover-card {
       display: block;
+      width: 100%;
       color: inherit;
     }
 
     .cover-card img {
       width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
       box-shadow: var(--shadow);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       background: #ece8dd;
     }
 
     .cover-card:hover img {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
     }
 
     .cover-caption {
@@ -175,12 +179,6 @@
       font-size: 0.92rem;
       color: var(--muted);
       text-align: center;
-    }
-
-    .aqob-tagline {
-      margin: 0 0 1rem 0;
-      color: var(--muted);
-      font-style: italic;
     }
 
     .actions {
@@ -431,10 +429,6 @@
       .featured-book {
         grid-template-columns: 1fr;
       }
-
-      .cover-grid {
-        grid-template-columns: 1fr 1fr;
-      }
     }
 
     @media (max-width: 760px) {
@@ -455,13 +449,8 @@
         height: 352px;
       }
 
-      .cover-grid {
-        grid-template-columns: 1fr;
-      }
-
       .cover-card img {
-        width: min(280px, 100%);
-        margin: 0 auto;
+        width: min(320px, 100%);
       }
     }
   </style>
@@ -512,23 +501,21 @@
     <div class="container">
       <section class="featured-book">
         <div class="cover-stack">
-          <div class="cover-grid">
-            <a class="cover-card" href="#aqob-front-lightbox" aria-label="Enlarge A Question of Balance front cover">
-              <img
-                src="AQOB Cover%20%28r4%29.png"
-                alt="Front cover of the novel A Question of Balance by David S. Sherman"
-              />
-              <div class="cover-caption">Front cover</div>
-            </a>
+          <a class="cover-card" href="#aqob-front-lightbox" aria-label="Enlarge A Question of Balance front cover">
+            <img
+              src="AQOB Cover%20%28r4%29.png"
+              alt="Front cover of the novel A Question of Balance by David S. Sherman"
+            />
+            <div class="cover-caption">Front cover</div>
+          </a>
 
-            <a class="cover-card" href="#aqob-back-lightbox" aria-label="Enlarge A Question of Balance back cover">
-              <img
-                src="AQOB Back cover %28r2%29.png"
-                alt="Back cover of the novel A Question of Balance by David S. Sherman"
-              />
-              <div class="cover-caption">Back cover</div>
-            </a>
-          </div>
+          <a class="cover-card" href="#aqob-back-lightbox" aria-label="Enlarge A Question of Balance back cover">
+            <img
+              src="AQOB Back cover %28r2%29.png"
+              alt="Back cover of the novel A Question of Balance by David S. Sherman"
+            />
+            <div class="cover-caption">Back cover</div>
+          </a>
         </div>
 
         <div>
