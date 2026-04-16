@@ -113,7 +113,7 @@
     .featured-book {
       display: grid;
       grid-template-columns: 320px 1fr;
-      gap: 2.75rem;
+      gap: 3.25rem;
       align-items: start;
       margin-bottom: 4rem;
     }
@@ -153,7 +153,14 @@
       gap: 1.5rem;
       align-items: center;
     }
-
+.cover-caption span {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+    
     .cover-card {
       display: block;
       width: 100%;
@@ -162,7 +169,7 @@
 
     .cover-card img {
       width: 100%;
-      max-width: 320px;
+      max-width: 360px;
       margin: 0 auto;
       box-shadow: var(--shadow);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -506,7 +513,7 @@
               src="AQOB Cover%20%28r4%29.png"
               alt="Front cover of the novel A Question of Balance by David S. Sherman"
             />
-            <div class="cover-caption">Front cover</div>
+            <div class="cover-caption"><span>Front Cover</span></div>
           </a>
 
           <a class="cover-card" href="#aqob-back-lightbox" aria-label="Enlarge A Question of Balance back cover">
@@ -514,19 +521,18 @@
               src="AQOB Back cover %28r2%29.png"
               alt="Back cover of the novel A Question of Balance by David S. Sherman"
             />
-            <div class="cover-caption">Back cover</div>
+            <div class="cover-caption"><span>Back Cover</span></div>
           </a>
         </div>
 
         <div>
           <p class="featured-label">Featured Novel</p>
-          <h2><em>A Question of Balance</em></h2>
+         <h2><em>A Question of Balance</em></h2>
 
-          <p class="aqob-tagline">A psychological literary thriller exploring identity, guilt, belief, and the fragile boundary between insight and truth.</p>
+          <p class="featured-genre"><em>A psychological literary thriller.</em></p>
 
           <p class="hook"><em><strong>Dr. Steven Gold has built his life on understanding—of his patients, of the mind, of himself. But when a new patient enters his office, that certainty begins to fracture.</strong></em></p>
-
-          <p>Brilliant, composed, and unnervingly perceptive, the man challenges Gold at every turn. Then, with quiet conviction, he claims to be Satan.</p>
+          <p>Then, with quiet conviction, he claims to be Satan.</p>
 
           <p>What begins as a test of clinical skill becomes something far more dangerous. As their sessions deepen, contradictions emerge, reality begins to blur, and a sudden death draws Gold into an investigation that seems to point back to his own office.</p>
 
