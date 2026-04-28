@@ -314,6 +314,7 @@
     }
 
     .author-section,
+    .essays-section,
     .contact-section {
       max-width: 720px;
     }
@@ -324,6 +325,7 @@
     }
 
     .author-section h2,
+    .essays-section h2,
     .author-note-section h2,
     .spotify-section h2,
     .contact-section h2 {
@@ -333,6 +335,7 @@
     }
 
     .author-section p,
+    .essays-section p,
     .author-note-section p,
     .contact-section p,
     .spotify-section p {
@@ -341,6 +344,35 @@
 
     .author-note-section p {
       max-width: 620px;
+    }
+
+    .essays-card {
+      display: block;
+      margin: 1.35rem 0 1rem;
+      color: inherit;
+    }
+
+    .essays-card img {
+      width: min(620px, 100%);
+      margin: 0;
+      border-radius: 3px;
+      box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.12),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      background: #ece8dd;
+    }
+
+    .essays-card:hover img {
+      transform: translateY(-4px);
+      box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.18),
+        0 7px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .essays-note {
+      color: var(--muted);
+      font-style: italic;
     }
 
     .playlist-block {
@@ -526,15 +558,6 @@
           Understanding isn't the same as knowing.
         </p>
 
-        <p style="
-          margin: 0.78rem 0 0;
-          font-size: 0.94rem;
-          color: var(--muted);
-          letter-spacing: 0.01em;
-          line-height: 1.5;
-        ">
-          <a href="https://davidshermanessays.substack.com" class="text-link no-underline">Read essays →</a>
-        </p>
       </div>
 
       <div class="site-rule"></div>
@@ -630,6 +653,30 @@
         <p>David S. Sherman, Ph.D., is a licensed psychotherapist and serial entrepreneur.</p>
         <p>His work explores identity, guilt, and belief.</p>
         <p>His fiction explores the uneasy intersection of psychology, philosophy, and the limits of truth.</p>
+      </section>
+
+      <hr class="section-rule" />
+
+      <section class="essays-section">
+        <h2>Essays</h2>
+        <p class="essays-note">Short reflections on identity, guilt, belief, style, and the uneasy space between understanding and knowing.</p>
+
+        <a
+          class="essays-card"
+          href="https://davidshermanessays.substack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Read David S. Sherman Essays on Substack"
+        >
+          <img
+            src="DSS Essays 3.png"
+            alt="David S. Sherman Essays logo with books, papers, and quill"
+          />
+        </a>
+
+        <p>
+          <a class="text-link" href="https://davidshermanessays.substack.com" target="_blank" rel="noopener noreferrer">Read essays on Substack →</a>
+        </p>
       </section>
 
       <hr class="section-rule" />
