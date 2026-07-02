@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Question of Balance | Psychological Thriller Novel by David S. Sherman</title>
-  <meta name="description"
-content="A Question of Balance is a psychological thriller and literary mystery by David S. Sherman. When psychologist Steven Gold begins treating a patient who claims to be Satan, reality, belief, guilt, and identity begin to unravel." />
-  <meta
-  name="keywords"
-  content="A Question of Balance, David S. Sherman, psychological thriller, literary thriller, literary mystery, psychological suspense, philosophical novel, philosophical thriller, psychological mystery, murder mystery, literary fiction, suspense novel, therapist protagonist, psychologist novel, Satan novel, guilt and morality, free will, identity and belief, existential fiction, psychological fiction"
-/>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SK5S5GB509"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-SK5S5GB509');
-</script>
+  <title>A Question of Balance | David S. Sherman</title>
+
+  <meta
+    name="description"
+    content="A literary psychological suspense novel by David S. Sherman about a psychotherapist whose new patient claims to be Satan—and may hold the key to a rabbi’s murder."
+  />
+
+  <link rel="canonical" href="https://www.aquestionofbalance.com/" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="A Question of Balance | David S. Sherman" />
   <meta
-  property="og:description"
-  content="A psychological thriller, literary mystery, and philosophical suspense novel about a psychologist whose certainty begins to unravel when a patient claims to be Satan."
-/>
+    property="og:description"
+    content="A literary psychological suspense novel about a psychotherapist whose new patient claims to be Satan—and may hold the key to a rabbi’s murder."
+  />
   <meta
     property="og:image"
-    content="https://www.aquestionofbalance.com/AQOB%20Cover%20%28r4%29.png"
+    content="https://www.aquestionofbalance.com/aqob-cover-r4.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Cover of A Question of Balance by David S. Sherman"
   />
   <meta property="og:url" content="https://www.aquestionofbalance.com/" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
- <meta
-  name="twitter:title"
-  content="A Question of Balance | David S. Sherman"
-/>
-<link rel="canonical" href="https://www.aquestionofbalance.com/" />
-<meta
-  name="twitter:description"
-  content="A psychological thriller, literary mystery, and philosophical suspense novel about a psychologist whose certainty begins to unravel when a patient claims to be Satan."
-/>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="twitter:title" content="A Question of Balance | David S. Sherman" />
+  <meta
+    name="twitter:description"
+    content="A literary psychological suspense novel about a psychotherapist whose new patient claims to be Satan—and may hold the key to a rabbi’s murder."
+  />
   <meta
     name="twitter:image"
-    content="https://www.aquestionofbalance.com/AQOB%20Cover%20%28r4%29.png"
+    content="https://www.aquestionofbalance.com/aqob-cover-r4.png"
   />
+  <meta
+    name="twitter:image:alt"
+    content="Cover of A Question of Balance by David S. Sherman"
+  />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK5S5GB509"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SK5S5GB509');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "A Question of Balance",
+    "author": {
+      "@type": "Person",
+      "name": "David S. Sherman"
+    },
+    "genre": [
+      "Literary Psychological Suspense",
+      "Psychological Thriller",
+      "Literary Mystery",
+      "Philosophical Fiction"
+    ],
+    "description": "A literary psychological suspense novel about psychotherapist Steven Gold, whose certainty begins to unravel when a patient claims to be Satan and may hold the key to a rabbi's murder.",
+    "image": "https://www.aquestionofbalance.com/aqob-cover-r4.png",
+    "inLanguage": "en"
+  }
+  </script>
 
   <style>
     :root {
@@ -61,12 +91,18 @@ content="A Question of Balance is a psychological thriller and literary mystery 
       --rule: #d6c8a0;
       --accent: #8b6a20;
       --link: #2f5f8c;
-      --max: 920px;
-      --shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      --max: 980px;
+      --shadow:
+        0 18px 38px rgba(0, 0, 0, 0.18),
+        0 8px 14px rgba(0, 0, 0, 0.10);
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -74,18 +110,9 @@ content="A Question of Balance is a psychological thriller and literary mystery 
       background: var(--bg);
       color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
+      line-height: 1.72;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--link);
     }
 
     img {
@@ -94,35 +121,94 @@ content="A Question of Balance is a psychological thriller and literary mystery 
       height: auto;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--link);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 10001;
+      padding: 0.7rem 1rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+    }
+
     .container {
       width: min(100% - 2rem, var(--max));
       margin: 0 auto;
     }
 
     .site-header {
-      padding: 5rem 0 3rem;
+      padding: 4.5rem 0 2.75rem;
       text-align: center;
     }
 
     .site-title {
       margin: 0;
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-size: clamp(2.45rem, 6vw, 4.5rem);
       font-weight: normal;
       letter-spacing: 0.01em;
+      line-height: 1.08;
     }
 
     .site-subtitle {
-      margin: 1rem auto 0;
-      max-width: 700px;
+      max-width: 760px;
+      margin: 1.1rem auto 0;
       color: var(--muted);
-      font-size: 1.02rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+
+    .site-tagline {
+      margin: 1.5rem auto 0;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-style: italic;
+      letter-spacing: 0.02em;
     }
 
     .site-rule {
       width: 72px;
       height: 1px;
+      margin: 2rem auto 0;
       background: var(--rule);
-      margin: 2.25rem auto 0;
+    }
+
+    .site-nav {
+      margin-top: 1.6rem;
+    }
+
+    .site-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      font-size: 0.94rem;
+      letter-spacing: 0.04em;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--accent);
     }
 
     main {
@@ -131,302 +217,209 @@ content="A Question of Balance is a psychological thriller and literary mystery 
 
     .featured-book {
       display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 3.25rem;
+      grid-template-columns: minmax(260px, 330px) 1fr;
+      gap: 3.4rem;
       align-items: start;
-      margin-bottom: 4rem;
     }
 
-    .featured-book h2 {
-      margin: 0 0 1rem 0;
-      font-size: clamp(1.9rem, 3vw, 2.6rem);
-      font-weight: normal;
+    .cover-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
+      align-items: center;
+    }
+
+    .cover-card {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    .cover-card::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -9px;
+      width: 72%;
+      height: 12px;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.18);
+      filter: blur(8px);
+      opacity: 0.56;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .cover-card img {
+      width: 100%;
+      max-width: 330px;
+      margin: 0 auto;
+      border-radius: 2px;
+      background: #ece8dd;
+      box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.16),
+        0 4px 8px rgba(0, 0, 0, 0.10);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cover-card:hover img,
+    .cover-card:focus-visible img {
+      transform: translateY(-5px) scale(1.008);
+      box-shadow: var(--shadow);
+    }
+
+    .cover-card:hover::after,
+    .cover-card:focus-visible::after {
+      opacity: 0.76;
+      transform: translateX(-50%) scale(1.04);
+    }
+
+    .cover-caption {
+      margin-top: 0.55rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .cover-caption span {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
     .featured-label {
-      margin: 0 0 0.6rem 0;
+      margin: 0 0 0.55rem;
       color: var(--accent);
       font-size: 0.82rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .featured-book .hook {
-      margin: 0 0 1.15rem 0;
-      font-size: 1.06rem;
+    .featured-copy h2 {
+      margin: 0 0 0.65rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: normal;
+      line-height: 1.18;
     }
 
-    .featured-book p {
-      margin: 0 0 1rem 0;
-    }
-
-    .aqob-tagline {
-      margin: 0 0 1rem 0;
+    .featured-genre {
+      margin: 0 0 1.35rem;
       color: var(--muted);
       font-style: italic;
     }
 
-    .cover-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: center;
-    }
-.cover-caption span {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-    
-    .cover-card {
-      display: block;
-      width: 100%;
-      color: inherit;
+    .featured-copy p {
+      margin: 0 0 1rem;
     }
 
-   .cover-card img {
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-  display: block;
+    .hook {
+      font-size: 1.08rem;
+    }
 
-  /* layered shadow for realism */
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.18),
-    0 4px 6px rgba(0, 0, 0, 0.12);
-
-  /* subtle lift effect */
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-
-  background: #ece8dd;
-}
-.cover-card:hover img {
-  transform: translateY(-6px) scale(1.01) rotate(-1deg);
-}
-   .cover-card:hover img {
-  transform: translateY(-6px) scale(1.01);
-
-  box-shadow:
-    0 18px 38px rgba(0, 0, 0, 0.22),
-    0 8px 12px rgba(0, 0, 0, 0.14);
-}
-
-    .cover-caption {
-      margin-top: 0.45rem;
-      font-size: 0.92rem;
+    .status-note {
+      margin-top: 1.2rem;
+      padding: 0.9rem 1rem;
+      border-left: 3px solid var(--rule);
+      background: rgba(214, 200, 160, 0.13);
       color: var(--muted);
-      text-align: center;
+      font-size: 0.96rem;
     }
-.cover-card {
-  position: relative;
-}
 
-.cover-card::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 12px;
-
-  background: rgba(0, 0, 0, 0.18);
-  filter: blur(8px);
-  opacity: 0.6;
-
-  transition: all 0.35s ease;
-}
-.cover-card img {
-  border-radius: 2px;
-}
-.cover-card:hover::after {
-  opacity: 0.8;
-  transform: translateX(-50%) scale(1.05);
-}
     .actions {
-      margin-top: 1.6rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem 1.25rem;
+      gap: 0.8rem 1.25rem;
+      margin-top: 1.6rem;
     }
 
     .text-link {
       color: var(--link);
       border-bottom: 1px solid rgba(47, 95, 140, 0.35);
       padding-bottom: 1px;
-      transition: color 0.25s ease, border-color 0.25s ease;
+      transition: color 0.22s ease, border-color 0.22s ease;
     }
 
-    .text-link:hover {
+    .text-link:hover,
+    .text-link:focus-visible {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
 
-    .no-underline {
-      border-bottom: none;
-      position: relative;
-      text-decoration: none;
-    }
-
-    .no-underline::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 1px;
-      background-color: var(--accent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.28s ease;
-      opacity: 0.7;
-    }
-
-    .no-underline:hover::after {
-      transform: scaleX(1);
-    }
-
     .section-rule {
-      border: none;
+      border: 0;
       border-top: 1px solid var(--rule);
-      margin: 3.5rem 0;
+      margin: 4rem 0;
     }
 
-    .books-list {
-      display: grid;
-      gap: 3rem;
+    .content-section {
+      max-width: 760px;
     }
 
-    .book-entry {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 1.75rem;
-      align-items: start;
-    }
-
-    .book-entry img {
-      width: 100%;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-entry h3 {
-      margin: 0 0 0.35rem 0;
+    .content-section h2 {
+      margin: 0 0 1rem;
       font-size: 1.55rem;
       font-weight: normal;
     }
 
-    .book-entry .meta {
-      margin: 0 0 1rem 0;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .book-entry p {
-      margin: 0 0 0.9rem 0;
-    }
-
-    .book-entry .status {
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .author-section,
-    .essays-section,
-    .contact-section {
-      max-width: 720px;
-    }
-
-    .author-note-section,
-    .spotify-section {
-      max-width: 720px;
-    }
-
-    .author-section h2,
-    .essays-section h2,
-    .author-note-section h2,
-    .spotify-section h2,
-    .contact-section h2 {
-      margin: 0 0 1rem 0;
-      font-size: 1.45rem;
-      font-weight: normal;
-    }
-
-    .author-section p,
-    .essays-section p,
-    .author-note-section p,
-    .contact-section p,
-    .spotify-section p {
-      margin: 0 0 1rem 0;
-    }
-
-    .author-note-section p {
-      max-width: 620px;
+    .content-section p {
+      margin: 0 0 1rem;
     }
 
     .essays-card {
       display: block;
       margin: 1.35rem 0 1rem;
-      color: inherit;
     }
 
     .essays-card img {
       width: min(620px, 100%);
-      margin: 0;
       border-radius: 3px;
+      background: #ece8dd;
       box-shadow:
         0 10px 22px rgba(0, 0, 0, 0.12),
-        0 4px 8px rgba(0, 0, 0, 0.08);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-      background: #ece8dd;
+        0 4px 8px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .essays-card:hover img {
+    .essays-card:hover img,
+    .essays-card:focus-visible img {
       transform: translateY(-4px);
       box-shadow:
-        0 16px 34px rgba(0, 0, 0, 0.18),
-        0 7px 12px rgba(0, 0, 0, 0.1);
+        0 16px 34px rgba(0, 0, 0, 0.17),
+        0 7px 12px rgba(0, 0, 0, 0.09);
     }
 
-    .essays-note {
+    .muted-note {
       color: var(--muted);
       font-style: italic;
     }
 
-    .playlist-block {
-      margin-bottom: 3rem;
+    .related-work {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.8rem;
+      align-items: start;
     }
 
-    .playlist-title {
-      margin: 1.75rem 0 0.4rem 0;
-      font-size: 1.35rem;
+    .related-work img {
+      width: 100%;
+      box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.11),
+        0 4px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .related-work h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.55rem;
       font-weight: normal;
-      letter-spacing: 0.01em;
     }
 
-    .playlist-rule {
-      width: 36px;
-      height: 1px;
-      background: var(--rule);
-      margin: 0.6rem 0 1.2rem 0;
-    }
-
-    .spotify-container {
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    .spotify-container iframe {
-      display: block;
-      width: 100%;
-      height: 352px;
-      border: none;
-      border-radius: 12px;
+    .related-work .meta {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-style: italic;
     }
 
     .contact-form {
-      margin-top: 1rem;
+      margin-top: 1.2rem;
     }
 
     .contact-form label {
@@ -441,18 +434,17 @@ content="A Question of Balance is a psychological thriller and literary mystery 
     .contact-form input[type="email"],
     .contact-form textarea {
       width: 100%;
-      padding: 0.8rem 0;
-      border: none;
+      padding: 0.78rem 0;
+      border: 0;
       border-bottom: 1px solid #cfcfcf;
-      background: transparent;
-      font: inherit;
-      color: var(--text);
       border-radius: 0;
       outline: none;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
     }
 
-    .contact-form input[type="text"]:focus,
-    .contact-form input[type="email"]:focus,
+    .contact-form input:focus,
     .contact-form textarea:focus {
       border-bottom-color: var(--accent);
     }
@@ -460,60 +452,59 @@ content="A Question of Balance is a psychological thriller and literary mystery 
     .contact-form button {
       margin-top: 1.4rem;
       padding: 0;
+      border: 0;
+      border-bottom: 1px solid rgba(47, 95, 140, 0.35);
       background: none;
-      border: none;
       color: var(--link);
       font: inherit;
       cursor: pointer;
-      border-bottom: 1px solid rgba(47, 95, 140, 0.35);
-      transition: color 0.25s ease, border-color 0.25s ease;
     }
 
-    .contact-form button:hover {
+    .contact-form button:hover,
+    .contact-form button:focus-visible {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
 
-  .lightbox {
-  position: fixed;
-  inset: 0;
-  background: #000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  z-index: 9999;
-  cursor: zoom-out;
-}
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.96);
+      cursor: zoom-out;
+    }
 
-.lightbox:target {
-  display: flex;
-}
+    .lightbox:target {
+      display: flex;
+    }
 
-.lightbox img {
-  max-width: min(92vw, 1100px);
-  max-height: 92vh;
-  width: auto;
-  height: auto;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
-}
+    .lightbox img {
+      max-width: min(92vw, 1100px);
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+    }
 
     .lightbox-close {
       position: fixed;
       top: 1rem;
       right: 1.25rem;
+      z-index: 10000;
       color: #f3efe8;
       font-size: 2rem;
       line-height: 1;
-      z-index: 10000;
-      cursor: pointer;
     }
 
     footer {
       padding: 2rem 0 3rem;
-      text-align: center;
       color: var(--muted);
-      font-size: 0.95rem;
+      text-align: center;
+      font-size: 0.93rem;
     }
 
     footer p {
@@ -524,192 +515,193 @@ content="A Question of Balance is a psychological thriller and literary mystery 
       .featured-book {
         grid-template-columns: 1fr;
       }
-    }
 
-    @media (max-width: 760px) {
-      .book-entry {
-        grid-template-columns: 1fr;
-      }
-
-      .book-entry img {
-        width: min(240px, 100%);
-        margin: 0 auto;
-      }
-
-      .site-header {
-        padding: 4rem 0 2.5rem;
-      }
-
-      .spotify-container iframe {
-        height: 352px;
+      .cover-stack {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
       }
 
       .cover-card img {
-        width: min(320px, 100%);
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-header {
+        padding: 3.4rem 0 2.2rem;
+      }
+
+      .cover-stack {
+        grid-template-columns: 1fr;
+      }
+
+      .related-work {
+        grid-template-columns: 1fr;
+      }
+
+      .related-work img {
+        width: min(230px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-rule {
+        margin: 3.25rem 0;
       }
     }
   </style>
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Book",
- "name":"A Question of Balance",
- "author":{
-   "@type":"Person",
-   "name":"David S. Sherman"
- },
- "genre":[
-   "Psychological Thriller",
-   "Literary Mystery",
-   "Philosophical Fiction",
-   "Suspense"
- ],
- "description":"A psychological thriller and literary mystery about psychologist Steven Gold, whose certainty begins to unravel when a patient claims to be Satan.",
- "image":"https://www.aquestionofbalance.com/AQOB%20Cover%20%28r4%29.png"
-}
-</script>  
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
     <div class="container">
-      <h1 class="site-title">David S. Sherman</h1>
+      <h1 class="site-title"><em>A Question of Balance</em></h1>
+
       <p class="site-subtitle">
-        Psychological thrillers, literary mysteries, and philosophical fiction exploring identity, belief, guilt, and the limits of truth.
+        A completed 95,000-word novel of literary psychological suspense by David S. Sherman.
       </p>
 
-      <div style="margin-top: 1.9rem;">
-        <div style="
-          width: 40px;
-          height: 1px;
-          background-color: rgba(139,106,32,0.35);
-          margin: 0 auto 12px auto;
-        "></div>
-
-        <p style="
-          font-style: italic;
-          font-size: 1.05rem;
-          color: var(--accent);
-          margin: 0;
-          letter-spacing: 0.02em;
-          line-height: 1.5;
-        ">
-          Understanding isn't the same as knowing.
-        </p>
-
-      </div>
+      <p class="site-tagline">Understanding isn’t the same as knowing.</p>
 
       <div class="site-rule"></div>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#novel">Novel</a></li>
+          <li><a href="#author">Author</a></li>
+          <li><a href="#essays">Essays</a></li>
+          <li><a href="#related-work">Related Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="container">
-      <section class="featured-book">
+
+      <section id="novel" class="featured-book" aria-labelledby="novel-title">
         <div class="cover-stack">
-          <a class="cover-card" href="#aqob-front-lightbox" aria-label="Enlarge A Question of Balance front cover">
+          <a
+            class="cover-card"
+            href="#aqob-front-lightbox"
+            aria-label="Enlarge A Question of Balance front cover"
+          >
             <img
-              src="AQOB Cover%20%28r4%29.png"
-              alt="Front cover of the novel A Question of Balance by David S. Sherman"
+              src="/aqob-cover-r4.png"
+              alt="Front cover of A Question of Balance by David S. Sherman"
             />
             <div class="cover-caption"><span>Front Cover</span></div>
           </a>
 
-          <a class="cover-card" href="#aqob-back-lightbox" aria-label="Enlarge A Question of Balance back cover">
+          <a
+            class="cover-card"
+            href="#aqob-back-lightbox"
+            aria-label="Enlarge A Question of Balance back cover"
+          >
             <img
-              src="AQOB Back cover %28r2%29.png"
-              alt="Back cover of the novel A Question of Balance by David S. Sherman"
+              src="/aqob-back-cover-r2.png"
+              alt="Back cover of A Question of Balance by David S. Sherman"
             />
             <div class="cover-caption"><span>Back Cover</span></div>
           </a>
         </div>
 
-        <div>
+        <div class="featured-copy">
           <p class="featured-label">Featured Novel</p>
-         <h2><em>A Question of Balance</em></h2>
+
+          <h2 id="novel-title"><em>A Question of Balance</em></h2>
 
           <p class="featured-genre">
-<em>A psychological thriller, literary mystery, and philosophical suspense novel.</em>
-</p>
+            A literary psychological suspense novel.
+          </p>
 
-          <p class="hook"><em><strong>Dr. Steven Gold has built his life on understanding—of his patients, of the mind, of himself. But when a new patient enters his office, that certainty begins to fracture.</strong></em></p>
-          <p>Then, with quiet conviction, he makes an impossible claim: he is Satan.</p>
+          <p class="hook">
+            <em><strong>
+              Dr. Steven Gold has built his life on understanding—his patients,
+              the mind, himself. Then a new patient enters his office and calmly
+              claims to be Satan.
+            </strong></em>
+          </p>
 
-          <p>What begins as a test of clinical skill becomes something far more dangerous. As their sessions deepen, contradictions emerge, reality begins to blur, and a sudden death draws Gold into an investigation that seems to point back to his own office.</p>
+          <p>
+            When Gold’s rabbi is murdered after a public confrontation, Gold
+            becomes a suspect. The patient vanishes. Gold’s memory begins to
+            fracture. And the closer he comes to the truth, the less certain he
+            is that he can trust the mind doing the searching.
+          </p>
 
-          <p><em>As the boundaries between patient and self begin to collapse, Gold is forced to confront a possibility more unsettling than madness: that the truths he has spent a lifetime explaining may not be truths at all.</em></p>
+          <p>
+            <em>A Question of Balance</em> blends psychological suspense,
+            literary mystery, and philosophical inquiry in an exploration of
+            guilt, identity, belief, moral responsibility, and whether
+            understanding can ever absolve us.
+          </p>
 
-<p style="margin-top:1.25rem;">
-<strong>Genres:</strong> Psychological Thriller • Literary Mystery • Philosophical Suspense
-</p>
+          <p class="status-note">
+            The novel is complete at approximately 95,000 words and is currently
+            seeking literary representation.
+          </p>
 
-<p>
-<strong>Exploring:</strong> Identity, belief, guilt, morality, free will, consciousness, religion, and the nature of truth.
-</p>
+          <div class="actions">
+            <a
+              class="text-link"
+              href="/aqob-preview.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Read the first five chapters
+            </a>
 
-<div class="actions">
-  <a class="text-link" href="AQOBPreview.pdf">Read the first nine chapters</a>
-            <a class="text-link" href="#aqob-front-lightbox">Enlarge front cover</a>
-            <a class="text-link" href="#aqob-back-lightbox">Enlarge back cover</a>
+            <a class="text-link" href="#aqob-front-lightbox">
+              Enlarge front cover
+            </a>
+
+            <a class="text-link" href="#aqob-back-lightbox">
+              Enlarge back cover
+            </a>
+
+            <a class="text-link" href="#contact">
+              Contact the author
+            </a>
           </div>
         </div>
       </section>
 
       <hr class="section-rule" />
 
-      <section class="books-list">
-        <article class="book-entry">
-          <a href="dia-cover.html" aria-label="View Dreams in Amber cover">
-            <img
-              src="DIA Cover.png"
-              alt="Cover of the novel Dreams in Amber by David S. Sherman"
-            />
-          </a>
+      <section id="author" class="content-section" aria-labelledby="author-title">
+        <h2 id="author-title">Author</h2>
 
-          <div>
-            <h3><em>Dreams in Amber</em></h3>
-            <p class="meta">A forthcoming prequel to <strong>A Question of Balance</strong>.</p>
+        <p>
+          David S. Sherman, Ph.D., is a California-licensed psychotherapist,
+          former graduate psychology instructor, technology entrepreneur, and
+          novelist.
+        </p>
 
-            <p>Before the questions of belief and identity that shape his later life, a young psychologist is drawn into a series of murders that may—or may not—be connected. As he searches for truth and understanding, he begins to confront a difficult reality: understanding isn't the same as knowing, and some answers only deepen the mystery they were meant to resolve.</p>
+        <p>
+          He earned his B.A. from Harvard, his M.A. from USC, and his Ph.D.
+          from UCLA. His fiction draws on decades of clinical experience to
+          explore identity, guilt, belief, consciousness, and moral
+          responsibility.
+        </p>
 
-            <p class="status">Projected completion: 2027.</p>
-          </div>
-        </article>
-
-        <article class="book-entry">
-          <a href="solip-cover.html" aria-label="View Solip cover">
-            <img
-              src="Solip Cover.png"
-              alt="Cover of the novel Solip by David S. Sherman"
-            />
-          </a>
-
-          <div>
-            <h3><em>Solip</em></h3>
-            <p class="meta">A new novel in progress.</p>
-
-            <p>A man can no longer trust the boundary of his own mind. Memory, fear, and imagination bleed into one another, until even his thoughts may not be his own. As certainty dissolves, he is forced to confront a terrifying question: if nothing can be trusted, what remains?</p>
-
-            <p class="status">Projected completion: 2027.</p>
-          </div>
-        </article>
+        <p>
+          <em>A Question of Balance</em> is his debut novel.
+        </p>
       </section>
 
       <hr class="section-rule" />
 
-      <section class="author-section">
-        <h2>Author</h2>
-        <p>David S. Sherman, Ph.D., is a licensed psychotherapist, entrepreneur, and novelist.</p>
+      <section id="essays" class="content-section" aria-labelledby="essays-title">
+        <h2 id="essays-title">Essays</h2>
 
-<p>He is the author of <em>A Question of Balance</em>, a psychological thriller and literary mystery exploring identity, guilt, belief, morality, and the limits of truth.</p>
-
-<p>His fiction examines the uneasy intersection of psychology, philosophy, consciousness, and faith.</p>
-      </section>
-
-      <hr class="section-rule" />
-
-      <section class="essays-section">
-        <h2>Essays</h2>
-        <p class="essays-note">Short reflections on identity, guilt, belief, style, and the uneasy space between understanding and knowing.</p>
+        <p class="muted-note">
+          Reflections on identity, guilt, belief, style, authorship, and the
+          uneasy space between understanding and knowing.
+        </p>
 
         <a
           class="essays-card"
@@ -719,146 +711,158 @@ content="A Question of Balance is a psychological thriller and literary mystery 
           aria-label="Read David S. Sherman Essays on Substack"
         >
           <img
-            src="DSS Essays 3.png"
-            alt="David S. Sherman Essays logo with books, papers, and quill"
+            src="/david-sherman-essays.png"
+            alt="David S. Sherman Essays logo"
           />
         </a>
 
         <p>
-          <a class="text-link" href="https://davidshermanessays.substack.com" target="_blank" rel="noopener noreferrer">Read essays on Substack →</a>
+          <a
+            class="text-link"
+            href="https://davidshermanessays.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read essays on Substack →
+          </a>
         </p>
       </section>
 
       <hr class="section-rule" />
 
-      <section class="author-note-section">
-        <h2>Author’s Note</h2>
+      <section
+        id="related-work"
+        class="content-section"
+        aria-labelledby="related-title"
+      >
+        <h2 id="related-title">Related Work</h2>
 
-        <p>We often mistake interpretation for truth and understanding for knowledge.</p>
-        <p>In my writing, I try to explore what happens when that distinction begins to erode—when certainty forms not from evidence, but from the need for coherence.</p>
-        <p>My books are not arguments, but examinations of how belief takes shape, and how difficult it is to unsettle once formed.</p>
+        <article class="related-work">
+          <div>
+            <img
+              src="/dreams-in-amber-cover.png"
+              alt="Cover concept for Dreams in Amber by David S. Sherman"
+            />
+          </div>
+
+          <div>
+            <h3><em>Dreams in Amber</em></h3>
+
+            <p class="meta">
+              A related psychological suspense novel in progress.
+            </p>
+
+            <p>
+              Before the questions of belief and identity that shape his later
+              life, a younger Steven Gold is drawn into a series of murders
+              that may—or may not—be connected. As he searches for truth and
+              understanding, he begins to confront a difficult reality:
+              understanding is not the same as knowing, and some answers only
+              deepen the mystery they were meant to resolve.
+            </p>
+          </div>
+        </article>
       </section>
 
       <hr class="section-rule" />
 
-      <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>Use this form to send a message to David Sherman.</p>
+      <section id="contact" class="content-section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
 
-        <form class="contact-form" action="https://formspree.io/f/xdkzdayz" method="POST">
+        <p>
+          Use this form to contact David Sherman.
+        </p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xdkzdayz"
+          method="POST"
+        >
           <label for="name">Your Name</label>
-          <input id="name" name="name" required type="text" />
+          <input id="name" name="name" required type="text" autocomplete="name" />
 
           <label for="email">Your Email</label>
-          <input id="email" name="_replyto" required type="email" />
+          <input
+            id="email"
+            name="_replyto"
+            required
+            type="email"
+            autocomplete="email"
+          />
 
           <label for="message">Message</label>
           <textarea id="message" name="message" required rows="5"></textarea>
 
-          <input style="display: none;" name="_gotcha" type="text" />
-          <input name="_redirect" type="hidden" value="thank-you.html" />
+          <input
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+            style="position:absolute;left:-9999px;"
+            aria-hidden="true"
+          />
+
+          <input
+            name="_redirect"
+            type="hidden"
+            value="https://www.aquestionofbalance.com/thank-you.html"
+          />
 
           <button type="submit">Send Message</button>
         </form>
       </section>
-
-      <hr class="section-rule" />
-
-      <section class="spotify-section">
-        <h2>Music</h2>
-
-        <p>
-          I listen to a wide variety of music while writing, reading, and revising. These are a few of the playlists I return to most often—different kinds of accompaniment for different kinds of thought.
-        </p>
-
-        <p>
-          Much of my work begins as fragments—notes jotted down throughout the day and night, often without clear connection. Music helps me return to them, to sit with them long enough for patterns to emerge and for something more coherent to take shape—though not always to resolve.
-        </p>
-
-        <p>
-          It also helps quiet the background noise of life when I’m trying to concentrate. I don’t use it as background so much as a way of sustaining attention—holding a space in which ideas can be revisited, tested, and, at times, transformed.
-        </p>
-
-        <div class="playlist-block">
-          <h3 class="playlist-title">The Sound of Thought</h3>
-          <div class="playlist-rule"></div>
-
-          <p>
-            <i>Jazz as thought.</i> Piano trios and modern jazz shaped by tension rather than resolution—music that moves without settling, allowing thought to deepen without distraction. For revision where meaning is uncertain, identity unstable, and answers arrive, if at all, indirectly. Post-bop / ECM / avant-garde- Space, tension, introspection.
-          </p>
-
-          <div class="spotify-container">
-            <iframe
-              title="The Sound of Thought Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/7Kpwl7skJHxt4jwySh1QHL?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="playlist-block">
-          <h3 class="playlist-title">Gold's Romantic Literature Playlist</h3>
-          <div class="playlist-rule"></div>
-
-          <p>
-            <i>Classical as feeling.</i> Quiet enough to reveal what’s there, structured enough to keep the mind from drifting. It doesn’t lead, but it doesn’t disappear either—sitting just beneath language, where meaning sharpens and subtle inconsistencies begin to emerge. Neo-classical / romantic minimalism- Emotion, reflection, atmosphere
-          </p>
-
-          <div class="spotify-container">
-            <iframe
-              title="Gold's Romantic Literature Playlist Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/0sIlfvh45wA2AqCXImD9ZS?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="playlist-block">
-          <h3 class="playlist-title">Changing Light</h3>
-          <div class="playlist-rule"></div>
-
-          <p>
-            <i>Jazz as movement.</i> A broader, more changeable field of sound—less narrowly tuned to a single mood, but equally suited to long stretches of concentration. For work that benefits from openness, variation, and the occasional shift in tone. Hard bop / bebop - Groove, swing, propulsion.
-          </p>
-
-          <div class="spotify-container">
-            <iframe
-              title="Changing Light Spotify playlist"
-              src="https://open.spotify.com/embed/playlist/14s6LO8S2kdoIHRf5ohfhT?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-      </section>
     </div>
   </main>
 
-  <div id="aqob-front-lightbox" class="lightbox" aria-label="Expanded front cover">
-    <a href="#" class="lightbox-close" aria-label="Close expanded front cover">&times;</a>
-    <a href="#" aria-label="Close expanded front cover">
+  <!-- Front-cover lightbox -->
+  <div
+    id="aqob-front-lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded front cover"
+  >
+    <a
+      href="#novel"
+      class="lightbox-close"
+      aria-label="Close expanded front cover"
+    >&times;</a>
+
+    <a href="#novel" aria-label="Close expanded front cover">
       <img
-        src="AQOB Cover%20%28r4%29.png"
+        src="/aqob-cover-r4.png"
         alt="Expanded front cover of A Question of Balance by David S. Sherman"
       />
     </a>
   </div>
 
-  <div id="aqob-back-lightbox" class="lightbox" aria-label="Expanded back cover">
-    <a href="#" class="lightbox-close" aria-label="Close expanded back cover">&times;</a>
-    <a href="#" aria-label="Close expanded back cover">
+  <!-- Back-cover lightbox -->
+  <div
+    id="aqob-back-lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded back cover"
+  >
+    <a
+      href="#novel"
+      class="lightbox-close"
+      aria-label="Close expanded back cover"
+    >&times;</a>
+
+    <a href="#novel" aria-label="Close expanded back cover">
       <img
-        src="AQOB Back cover %28r2%29.png"
+        src="/aqob-back-cover-r2.png"
         alt="Expanded back cover of A Question of Balance by David S. Sherman"
       />
     </a>
   </div>
 
   <footer>
-    <p><em>Web page and cover designs by David S. Sherman.</em></p>
-    <p>Copyright &copy; 2026 David Scott Sherman. All rights reserved.</p>
+    <div class="container">
+      <p><em>Web page and cover designs by David S. Sherman.</em></p>
+      <p>Copyright &copy; 2026 David Scott Sherman. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
