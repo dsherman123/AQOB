@@ -406,6 +406,24 @@
         0 4px 8px rgba(0, 0, 0, 0.06);
     }
 
+    .related-cover {
+      display: block;
+      position: relative;
+      color: inherit;
+    }
+
+    .related-cover img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .related-cover:hover img,
+    .related-cover:focus-visible img {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.17),
+        0 7px 12px rgba(0, 0, 0, 0.09);
+    }
+
     .related-work h3 {
       margin: 0 0 0.35rem;
       font-size: 1.55rem;
@@ -687,11 +705,16 @@
         <h2 id="author-title">Author</h2>
 
         <p>
-          David S. Sherman, Ph.D., is a psychotherapist, former graduate psychology adjunct faculty member, technology entrepreneur, and novelist.
+          David S. Sherman, Ph.D., is a California-licensed psychotherapist,
+          former graduate psychology instructor, technology entrepreneur, and
+          novelist.
         </p>
 
         <p>
-          He earned his A.B. in Psychology and Social Relations from Harvard University, his M.A. from USC, and his Ph.D. from UCLA. His fiction draws on decades of clinical experience to explore identity, guilt, belief, consciousness, and moral responsibility.
+          He earned his B.A. from Harvard, his M.A. from USC, and his Ph.D.
+          from UCLA. His fiction draws on decades of clinical experience to
+          explore identity, guilt, belief, consciousness, and moral
+          responsibility.
         </p>
 
         <p>
@@ -745,10 +768,16 @@
 
         <article class="related-work">
           <div>
-            <img
-              src="/dreams-in-amber-cover.png"
-              alt="Cover concept for Dreams in Amber by David S. Sherman"
-            />
+            <a
+              class="related-cover"
+              href="#dia-cover-lightbox"
+              aria-label="Enlarge Dreams in Amber cover"
+            >
+              <img
+                src="/dreams-in-amber-cover.png"
+                alt="Cover concept for Dreams in Amber by David S. Sherman"
+              />
+            </a>
           </div>
 
           <div>
@@ -759,19 +788,28 @@
             </p>
 
             <p>
-              A younger Steven Gold is drawn into a series of ghastly, religiously staged murders at a church. When details from the crimes begin surfacing in therapy, he suspects that one of his patients may be involved.</p>
-            <p>
-              But the deeper he looks, the more the boundaries blur. Several patients appear connected to the victims, the church, and one another, each carrying fragments of a larger truth. As Gold searches for the pattern that will expose the killer, he is forced to confront the limits of diagnosis, memory, and reason—and the possibility that understanding a crime may bring him no closer to knowing who committed it.
+              Before the questions of belief and identity that shape his later
+              life, a younger Steven Gold is drawn into a series of murders
+              that may—or may not—be connected. As he searches for truth and
+              understanding, he begins to confront a difficult reality:
+              understanding is not the same as knowing, and some answers only
+              deepen the mystery they were meant to resolve.
             </p>
           </div>
         </article>
 
         <article class="related-work">
           <div>
-            <img
-              src="/solip-cover.png"
-              alt="Cover concept for Solip by David S. Sherman"
-            />
+            <a
+              class="related-cover"
+              href="#solip-cover-lightbox"
+              aria-label="Enlarge Solip cover"
+            >
+              <img
+                src="/solip-cover.png"
+                alt="Cover concept for Solip by David S. Sherman"
+              />
+            </a>
           </div>
 
           <div>
@@ -884,6 +922,50 @@
       <img
         src="/aqob-back-cover-r2.png"
         alt="Expanded back cover of A Question of Balance by David S. Sherman"
+      />
+    </a>
+  </div>
+
+  <!-- Dreams in Amber cover lightbox -->
+  <div
+    id="dia-cover-lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded Dreams in Amber cover"
+  >
+    <a
+      href="#related-work"
+      class="lightbox-close"
+      aria-label="Close expanded Dreams in Amber cover"
+    >&times;</a>
+
+    <a href="#related-work" aria-label="Close expanded Dreams in Amber cover">
+      <img
+        src="/dreams-in-amber-cover.png"
+        alt="Expanded cover concept for Dreams in Amber by David S. Sherman"
+      />
+    </a>
+  </div>
+
+  <!-- Solip cover lightbox -->
+  <div
+    id="solip-cover-lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded Solip cover"
+  >
+    <a
+      href="#related-work"
+      class="lightbox-close"
+      aria-label="Close expanded Solip cover"
+    >&times;</a>
+
+    <a href="#related-work" aria-label="Close expanded Solip cover">
+      <img
+        src="/solip-cover.png"
+        alt="Expanded cover concept for Solip by David S. Sherman"
       />
     </a>
   </div>
